@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #f1f1e9;
+  --foreground: #0000;
+  --yellowing: #fed966;
+  --greenArmy: #334B35;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f1f1e9;
+    --foreground: #0000;
+    --yellowing: #fed966;
+    --greenArmy: #334B35;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar saat berada di posisi atas */
+.navbar-top {
+  background-color: transparent; /* Transparan */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar saat di-scroll */
+.navbar-floating {
+  background-color: rgba(0, 0, 0, 0.8); /* Transparan dengan warna gelap */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Warna teks untuk navbar */
+.navbar-top .nav-link,
+.navbar-top .navbar-brand {
+  color: black; /* Warna teks hitam saat di posisi atas */
+}
+
+.navbar-floating .nav-link,
+.navbar-floating .navbar-brand {
+  color: white; /* Warna teks putih saat di-scroll */
+}
+
+/* Pastikan navbar selalu di atas */
+.fixed-top {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+
+
